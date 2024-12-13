@@ -1,0 +1,18 @@
+CREATE DATABASE voting_system;
+
+USE voting_system;
+
+-- Table to store votes
+CREATE TABLE votes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    vote_option VARCHAR(255) NOT NULL
+);
+
+-- Table to store settings
+CREATE TABLE settings (
+    id INT PRIMARY KEY,
+    options TEXT NOT NULL
+);
+
+-- Insert default settings
+INSERT INTO settings (id, options) VALUES (1, 'Za,Protiv,Uzdrzan');
